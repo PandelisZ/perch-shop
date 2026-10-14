@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_JLlXVy8Dz0x2f5gzr2Aj5evb
+key: saeabd6224b84c7b3f7d23614fb922ca0
+version: 0
+name: 07 Removing the mug updates the count and total
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Remove the Perch mug from the cart.'
+outcomes:
+  - 'Perch mug is no longer listed in the Your cart panel.'
+  - 'The Your cart panel shows "Items in cart: 1".'
+  - 'The Your cart panel shows "Cart total: $16.00".'

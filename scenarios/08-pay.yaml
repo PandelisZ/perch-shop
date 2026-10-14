@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_3mbnaqlrwN1qc79ByG0Z2QML
+key: s919e8b904f327d3fb7e160cb28264bf3
+version: 0
+name: 08 Paying with the test card confirms the order
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Pay for the cart in Checkout with card number 4242 4242 4242 4242 and name on card Robin.'
+outcomes:
+  - 'Checkout shows "Payment successful".'
+  - 'Checkout shows "Charged $28.00 to the card ending 4242".'
+  - 'The Your cart panel shows "Your cart is empty."'

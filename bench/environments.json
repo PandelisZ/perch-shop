@@ -1,0 +1,67 @@
+{
+  "base": {
+    "env": "venv_kelLa0QNnEjYs66DoJwV9WP2",
+    "url": "https://pandelisz.github.io/perch-shop/",
+    "env_name": "Build main"
+  },
+  "move": {
+    "env": "venv_gXLJN48oDyeXiMoD0VzObY2W",
+    "url": "https://pandelisz.github.io/perch-shop/s/28c877/",
+    "env_name": "Build 28c877"
+  },
+  "rename": {
+    "env": "venv_gbGEy90rngPqS5PDPQzNwRLM",
+    "url": "https://pandelisz.github.io/perch-shop/s/4681c0/",
+    "env_name": "Build 4681c0"
+  },
+  "menu": {
+    "env": "venv_E8OgXxwMBl2pCAknlp2qvRGK",
+    "url": "https://pandelisz.github.io/perch-shop/s/a7fe2d/",
+    "env_name": "Build a7fe2d"
+  },
+  "postcode": {
+    "env": "venv_k4Z6qY9enAlgS6k1gpoXRj2l",
+    "url": "https://pandelisz.github.io/perch-shop/s/1f2b32/",
+    "env_name": "Build 1f2b32"
+  },
+  "copy": {
+    "env": "venv_QW2yljEVDqymfw6Dz4NoXYMw",
+    "url": "https://pandelisz.github.io/perch-shop/s/e60427/",
+    "env_name": "Build e60427"
+  },
+  "bug-preview": {
+    "env": "venv_wxXPkbKgBY62SJN1357y4jVe",
+    "url": "https://pandelisz.github.io/perch-shop/s/984b08/",
+    "env_name": "Build 984b08"
+  },
+  "bug-total": {
+    "env": "venv_V5d8LOZYBL09hlXBvzwRMxWX",
+    "url": "https://pandelisz.github.io/perch-shop/s/5fe933/",
+    "env_name": "Build 5fe933"
+  },
+  "bug-count": {
+    "env": "venv_YQLPpdXgDroxHpkBqORz4G63",
+    "url": "https://pandelisz.github.io/perch-shop/s/b95612/",
+    "env_name": "Build b95612"
+  },
+  "bug-declined": {
+    "env": "venv_wkqxaXd6B6x2sJQn7MjeEO2W",
+    "url": "https://pandelisz.github.io/perch-shop/s/5d6d0d/",
+    "env_name": "Build 5d6d0d"
+  },
+  "bug-charge": {
+    "env": "venv_Xk4ZjVq3DpEMHpNB8gaPybAl",
+    "url": "https://pandelisz.github.io/perch-shop/s/e5411d/",
+    "env_name": "Build e5411d"
+  },
+  "bug-confirm": {
+    "env": "venv_G6RVgbyvD3xXspgBQmp2kLYZ",
+    "url": "https://pandelisz.github.io/perch-shop/s/90cd92/",
+    "env_name": "Build 90cd92"
+  },
+  "all-bugs": {
+    "env": "venv_M3Q8bxvyDJk3f8jBKXZrY96e",
+    "url": "https://pandelisz.github.io/perch-shop/s/69062c/",
+    "env_name": "Build 69062c"
+  }
+}

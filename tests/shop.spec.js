@@ -56,7 +56,7 @@ test("04 confirming the upgrade moves the account to Pro", async ({ page }) => {
 test("05 adding a notebook updates the cart", async ({ page }) => {
   await signIn(page);
   await page.getByRole("button", { name: "Add Perch notebook to cart" }).click();
-  await expect(cart(page).getByText("Perch notebook")).toBeVisible();
+  await expect(cart(page).getByText("Perch notebook", { exact: true })).toBeVisible();
   await expect(cart(page).getByText("Items in cart: 3")).toBeVisible();
   await expect(cart(page).getByText("Cart total: $36.00")).toBeVisible();
 });
@@ -71,7 +71,7 @@ test("06 raising the mug quantity updates the total", async ({ page }) => {
 test("07 removing the mug updates the count and total", async ({ page }) => {
   await signIn(page);
   await cart(page).getByRole("button", { name: "Remove Perch mug" }).click();
-  await expect(cart(page).getByText("Perch mug")).toBeHidden();
+  await expect(cart(page).getByText("Perch mug", { exact: true })).toBeHidden();
   await expect(cart(page).getByText("Items in cart: 1")).toBeVisible();
   await expect(cart(page).getByText("Cart total: $16.00")).toBeVisible();
 });

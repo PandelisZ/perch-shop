@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_6m3jXE7NBV3gtD4wq2gGDP5o
+key: s5618d3ab8395128e574ed300914caca7
+version: 0
+name: 03 The Pro invoice preview opens without confirming
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Open the invoice preview for upgrading to Pro, without confirming the upgrade.'
+outcomes:
+  - 'An Invoice preview with the heading "Invoice preview" is visible.'
+  - 'The invoice preview shows "Prorated amount: $10.00".'
+  - 'The Billing panel still shows "Current plan: Free".'

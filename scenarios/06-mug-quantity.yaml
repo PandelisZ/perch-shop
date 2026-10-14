@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_M1jAbpl0wd5mfj3zye36qX8D
+key: s71ab8495092244c5452d81ff498966b3
+version: 0
+name: 06 Raising the mug quantity updates the total
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Raise the quantity of the Perch mug in the cart by one.'
+outcomes:
+  - 'The Perch mug line shows "Quantity: 2".'
+  - 'The Your cart panel shows "Cart total: $40.00".'

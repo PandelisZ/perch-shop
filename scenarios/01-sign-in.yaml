@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_Dbn1Me0xWgKksm7WRymVa3Zr
+key: s246698594c5334f8ca1a46def5e92b8f
+version: 0
+name: 01 Signing in opens the shop
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+outcomes:
+  - 'The header shows "Signed in as Robin".'
+  - 'The Billing panel shows "Current plan: Free".'
+  - 'The Your cart panel shows "Cart total: $28.00".'

@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_5rjxD3OKw9v0SVJzkZ02yngL
+key: se9396740e887625e296d0d3c1b76dd40
+version: 0
+name: 09 A declined card is not shown as paid
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Pay for the cart in Checkout with card number 4000 0000 0000 0002 and name on card Robin.'
+outcomes:
+  - 'Checkout shows "Payment declined. Your card was not charged."'
+  - 'Checkout does not show "Payment successful".'
+  - 'The Your cart panel still shows "Cart total: $28.00".'

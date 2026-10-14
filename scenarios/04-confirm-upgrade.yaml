@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_9AoJypGVWp68Uqnwxjbm67NZ
+key: s6b7c1ae7d122c4191e29629faa6669a2
+version: 0
+name: 04 Confirming the upgrade moves the account to Pro
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Open the invoice preview for upgrading to Pro.'
+  - 'Confirm the upgrade shown in the invoice preview.'
+outcomes:
+  - 'The Billing panel shows "Current plan: Pro".'
+  - 'The invoice preview is closed.'

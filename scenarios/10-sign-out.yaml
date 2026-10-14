@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+id: scenario_rnbmOoxVWb6eU6DWLMga9X4e
+key: s48dc87a3c32bc2025898b92ddc90ea1e
+version: 0
+name: 10 Signing out returns to the sign-in page
+labels: [regression]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Sign out.'
+outcomes:
+  - 'The sign-in page with a Sign in button is shown.'
+  - '"Signed in as Robin" is no longer shown.'
