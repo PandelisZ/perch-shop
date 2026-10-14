@@ -1,0 +1,18 @@
+:root { --bg:#f6f4ef; --card:#fff; --ink:#1d1b16; --muted:#6b665c; --line:#e3dfd5; --accent:#2f5d50; --error:#a33a2b; }
+* { box-sizing: border-box; }
+body { margin:0; font:15px/1.5 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+header { display:flex; gap:16px; align-items:center; padding:12px 24px; border-bottom:1px solid var(--line); background:var(--card); }
+header span { margin-left:auto; color:var(--muted); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; padding:24px; max-width:1100px; margin:0 auto; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+h2 { margin:0 0 8px; font-size:18px; } h3 { margin:0 0 6px; font-size:16px; }
+button { font:inherit; padding:6px 12px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.secondary { background:transparent; color:var(--accent); }
+label { display:block; margin:8px 0; } input { display:block; width:100%; padding:6px 8px; border:1px solid var(--line); border-radius:6px; font:inherit; }
+ul { list-style:none; padding:0; margin:0; } li { display:flex; gap:10px; align-items:center; padding:6px 0; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+li .name, .products li span:first-child { flex:1; } .qty { display:inline-flex; gap:6px; align-items:center; } .qty button { padding:0 8px; }
+.muted { color:var(--muted); } .small { font-size:13px; } .error, .declined { color:var(--error); } .success { color:var(--accent); }
+.preview { margin-top:12px; padding:12px; border:1px dashed var(--accent); border-radius:10px; } .row { display:flex; gap:8px; flex-wrap:wrap; }
+.menu-wrap { position:relative; display:inline-block; } [role=menu] { display:flex; flex-direction:column; gap:4px; margin-top:6px; padding:6px; border:1px solid var(--line); border-radius:8px; background:var(--card); }
+.signin { max-width:360px; margin:10vh auto; background:var(--card); padding:24px; border-radius:12px; border:1px solid var(--line); }
+.signin button { margin-top:8px; width:100%; }

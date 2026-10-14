@@ -1,0 +1,14 @@
+{
+  "name": "perch-shop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "BASE_PATH=/ node scripts/build.mjs && python3 -m http.server 4173 --directory dist",
+    "test": "playwright test",
+    "matrix": "node scripts/matrix.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
