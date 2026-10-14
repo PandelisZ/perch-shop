@@ -1,0 +1,20 @@
+Running "04s The Confirm upgrade button moves the account to Pro" locally with codex gpt-6-luna (fast, low reasoning) against https://pandelisz.github.io/perch-shop/s/90cd92/
+Chrome is open at http://127.0.0.1:58478; watch the runs in its window
+  look
+  checkpoint 1: Sign-in page shows demo account credentials
+  type
+  type
+  click
+  checkpoint 2: Signed in account shows Billing current plan Free
+  look
+  click
+  checkpoint 3: Invoice preview for Pro upgrade is open
+  checkpoint 4: Invoice preview for Pro upgrade is open
+  click
+  checkpoint 5: Immediately after Confirm upgrade; plan remains Free and invoice preview remains open
+Left 1 tab open for inspection (DevTools at http://127.0.0.1:58478); close Chrome when done
+failed       04s The Confirm upgrade button moves the account to Pro
+  1. failed       Immediately after pressing Confirm upgrade, the Billing panel shows "Current plan: Pro".
+  2. failed       The invoice preview is closed.
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-161833/04s-the-confirm-upgrade-button-moves-the-account-to-pro/report.md
+error: 1 of 1 Scenarios did not pass

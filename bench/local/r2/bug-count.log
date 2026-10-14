@@ -1,0 +1,97 @@
+Running 10 Scenarios locally with codex gpt-6-luna (fast, low reasoning) against https://pandelisz.github.io/perch-shop/s/b95612/, 5 tabs at a time
+Chrome is open at http://127.0.0.1:58478; watch the runs in its window
+[1] started: 01 Signing in opens the shop
+[2] started: 02 A wrong password is refused
+[3] started: 03 The Pro invoice preview opens without confirming
+[4] started: 04 Confirming the upgrade moves the account to Pro
+[5] started: 05 Adding a notebook updates the cart
+[5] look
+[2] look
+[4] look
+[3] look
+[1] look
+[2] type
+[3] screenshot
+[5] type
+[4] type
+[1] checkpoint 1: Sign-in page showing demo credentials
+[3] checkpoint 1: Sign-in page showing demo account credentials
+[2] type
+[4] type
+[1] type
+[5] type
+[3] type
+[2] click
+[4] click
+[1] type
+[5] click
+[3] type
+[2] checkpoint 1: Sign-in rejected with exact incorrect-credentials message; still on sign-in page
+[4] checkpoint 1: Signed in as Robin; Billing shows Current plan: Free and Upgrade to Pro
+[1] click
+[3] click
+[2] checkpoint 2: Sign-in rejected with exact incorrect-credentials message; shop identity absent
+[4] click
+[5] checkpoint 1: Signed in as Robin; cart currently contains mug and tote
+[1] checkpoint 2: Shop after demo sign-in: signed in as Robin
+[1] checkpoint 3: Billing and cart show expected values
+[3] checkpoint 2: Signed-in shop showing Free plan and Upgrade to Pro
+[3] checkpoint 3: Signed-in shop showing Free plan and Upgrade to Pro
+[5] click
+[4] checkpoint 2: Invoice preview open: Pro plan billed monthly, prorated amount $10.00
+[1] checkpoint 4: Signed in as Robin and shop panels visible
+[3] click
+[5] checkpoint 2: Cart contains notebook; 3 items and $36.00 total
+[2] passed: 02 A wrong password is refused
+[6] started: 06 Raising the mug quantity updates the total
+[4] click
+[4] click
+[4] ! browser_click: e2103051754-2506928612-29 is not on the page any more (or not shown); look again for current refs
+[3] checkpoint 4: Invoice preview shows $10.00 proration and Billing remains Free
+[3] checkpoint 5: Invoice preview shows $10.00 proration and Billing remains Free
+[6] look
+[4] look
+[1] passed: 01 Signing in opens the shop
+[7] started: 07 Removing the mug updates the count and total
+[6] type
+[5] ! scenario_finish: outcomes has 4 entries; the Scenario has 3 outcomes. Give one entry per outcome, in order.
+[4] checkpoint 3: After confirmation: Billing says Current plan: Pro, success message shown, invoice preview closed
+[7] look
+[5] the agent stopped before finishing; asking it to continue (1)
+[7] type
+[6] type
+[3] passed: 03 The Pro invoice preview opens without confirming
+[8] started: 08 Paying with the test card confirms the order
+[7] type
+[6] click
+[5] ! scenario_finish: outcomes has 4 entries; the Scenario has 3 outcomes. Give one entry per outcome, in order.
+[4] passed: 04 Confirming the upgrade moves the account to Pro
+[9] started: 09 A declined card is not shown as paid
+[8] look
+[7] click
+[8] type
+[6] checkpoint 1: Signed in as Robin; cart shows Perch mug quantity 1 and total $28.00
+[9] look
+[7] checkpoint 1: Signed in: cart shows Perch mug and tote before removal
+[9] checkpoint 1: Sign-in page shows demo account credentials
+[8] type
+[7] click
+[7] checkpoint 2: Signed in: cart shows Perch mug and tote before removal
+[9] type
+[5] passed: 05 Adding a notebook updates the cart
+[10] started: 10 Signing out returns to the sign-in page
+[6] click
+[7] checkpoint 3: After removing mug: tote remains and cart total is $16.00
+[8] click
+[9] type
+[6] checkpoint 2: Mug quantity is 2 and cart total is $40.00
+[10] look
+[7] checkpoint 4: Final cart state after mug removal; count remains 2
+[8] checkpoint 1: Signed in as Robin; checkout cart total $28.00
+[9] click
+[10] type
+[8] look
+[9] checkpoint 2: Signed in shop showing $28 cart and checkout fields
+[6] ! scenario_finish: outcomes has 1 entries; the Scenario has 2 outcomes. Give one entry per outcome, in order.
+[10] type
+[9] click

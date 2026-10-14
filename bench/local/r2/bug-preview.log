@@ -1,0 +1,164 @@
+Running 10 Scenarios locally with codex gpt-6-luna (fast, low reasoning) against https://pandelisz.github.io/perch-shop/s/984b08/, 5 tabs at a time
+Chrome is open at http://127.0.0.1:58478; watch the runs in its window
+[1] started: 01 Signing in opens the shop
+[2] started: 02 A wrong password is refused
+[3] started: 03 The Pro invoice preview opens without confirming
+[4] started: 04 Confirming the upgrade moves the account to Pro
+[5] started: 05 Adding a notebook updates the cart
+[4] look
+[2] look
+[5] look
+[3] look
+[1] look
+[4] screenshot
+[2] type
+[3] checkpoint 1: Sign-in page showing the demo account credentials
+[4] type
+[1] type
+[5] type
+[3] type
+[5] type
+[4] type
+[1] type
+[3] type
+[2] type
+[4] click
+[1] click
+[5] click
+[3] click
+[2] click
+[4] checkpoint 1: Signed in as Robin; Billing panel shows Current plan: Free and Upgrade to Pro is available
+[1] checkpoint 1: Signed-in shop showing Robin, Free plan, and $28.00 cart
+[5] checkpoint 1: Signed in; initial product list and cart (2 items, $28.00)
+[2] checkpoint 1: Wrong password submission shows exact error and remains on sign-in page
+[3] checkpoint 2: Signed-in shop shows Current plan: Free and Upgrade to Pro
+[3] checkpoint 3: Signed-in shop shows Current plan: Free and Upgrade to Pro
+[4] look
+[5] click
+[5] click
+[5] ! browser_click: e2557870318-2498866448-13 is not on the page any more (or not shown); look again for current refs
+[3] checkpoint 4: Signed-in shop shows Current plan: Free and Upgrade to Pro
+[4] click
+[5] look
+[1] passed: 01 Signing in opens the shop
+[6] started: 06 Raising the mug quantity updates the total
+[4] checkpoint 2: Invoice preview open for Pro plan, monthly, prorated amount $12.00; Confirm upgrade button visible
+[3] click
+[3] click
+[5] checkpoint 2: Cart after adding one Perch notebook: 3 items, $36.00
+[3] ! browser_click: e1042541813-279695561-12 is not on the page any more (or not shown); look again for current refs
+[2] passed: 02 A wrong password is refused
+[7] started: 07 Removing the mug updates the count and total
+[3] look
+[6] look
+[4] look
+[7] look
+[4] click
+[6] type
+[3] checkpoint 5: Invoice preview open; prorated amount is $12.00 and current plan remains Free
+[3] checkpoint 6: Invoice preview open; prorated amount is $12.00 and current plan remains Free
+[3] checkpoint 7: Invoice preview open; prorated amount is $12.00 and current plan remains Free
+[7] screenshot
+[6] type
+[4] checkpoint 3: Upgrade confirmed; Billing shows Current plan: Pro and invoice preview is no longer present
+[4] checkpoint 4: Upgrade confirmed; Billing shows Current plan: Pro and invoice preview is no longer present
+[5] passed: 05 Adding a notebook updates the cart
+[8] started: 08 Paying with the test card confirms the order
+[7] type
+[7] type
+[6] click
+[8] look
+[6] checkpoint 1: Signed in as Robin; cart shows Perch mug quantity 1 and total $28.00
+[8] type
+[7] click
+[3] failed: 03 The Pro invoice preview opens without confirming
+[9] started: 09 A declined card is not shown as paid
+[7] ! browser_click: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[4] passed: 04 Confirming the upgrade moves the account to Pro
+[10] started: 10 Signing out returns to the sign-in page
+[6] click
+[6] ! browser_click: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[8] type
+[8] ! browser_type: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[7] look
+[7] ! browser_look: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[9] look
+[10] look
+[6] look
+[6] ! browser_look: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[10] checkpoint 1: Starting sign-in page showing the demo account
+[9] type
+[8] look
+[8] ! browser_look: could not attach to the tab: Target.attachToTarget failed: No target with given id found
+[10] type
+[10] type
+[7] blocked: 07 Removing the mug updates the count and total
+[10] click
+[9] look
+[8] blocked: 08 Paying with the test card confirms the order
+[6] blocked: 06 Raising the mug quantity updates the total
+[9] type
+[10] checkpoint 2: Signed-in shop shows 'Signed in as Robin' and Sign out
+[9] click
+[10] click
+[9] checkpoint 1: Signed in checkout page with cart total $28.00
+[10] checkpoint 3: After sign-out: sign-in page with Sign in button; Robin status absent
+[10] checkpoint 4: After sign-out: sign-in page with Sign in button; Robin status absent
+[9] click
+[10] passed: 10 Signing out returns to the sign-in page
+[9] type
+[9] click
+[9] type
+[9] click
+[9] look
+[9] checkpoint 2: Declined payment message and cart still totals $28.00
+[9] passed: 09 A declined card is not shown as paid
+Left 4 tabs open for inspection (DevTools at http://127.0.0.1:58478); close Chrome when done
+passed       01 Signing in opens the shop
+  1. passed       The header shows "Signed in as Robin".
+  2. passed       The Billing panel shows "Current plan: Free".
+  3. passed       The Your cart panel shows "Cart total: $28.00".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/01-signing-in-opens-the-shop/report.md
+passed       02 A wrong password is refused
+  1. passed       An error reads exactly "Incorrect email or password."
+  2. passed       The shop does not open; "Signed in as Robin" is not shown.
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/02-a-wrong-password-is-refused/report.md
+failed       03 The Pro invoice preview opens without confirming
+  1. passed       An Invoice preview with the heading "Invoice preview" is visible.
+  2. failed       The invoice preview shows "Prorated amount: $10.00".
+  3. passed       The Billing panel still shows "Current plan: Free".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/03-the-pro-invoice-preview-opens-without-confirming/report.md
+passed       04 Confirming the upgrade moves the account to Pro
+  1. passed       The Billing panel shows "Current plan: Pro".
+  2. passed       The invoice preview is closed.
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/04-confirming-the-upgrade-moves-the-account-to-pro/report.md
+passed       05 Adding a notebook updates the cart
+  1. passed       The Your cart panel lists Perch notebook.
+  2. passed       The Your cart panel shows "Items in cart: 3".
+  3. passed       The Your cart panel shows "Cart total: $36.00".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/05-adding-a-notebook-updates-the-cart/report.md
+blocked      06 Raising the mug quantity updates the total
+  1. blocked      The Perch mug line shows "Quantity: 2".
+  2. blocked      The Your cart panel shows "Cart total: $40.00".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/06-raising-the-mug-quantity-updates-the-total/report.md
+blocked      07 Removing the mug updates the count and total
+  1. blocked      Perch mug is no longer listed in the Your cart panel.
+  2. blocked      The Your cart panel shows "Items in cart: 1".
+  3. blocked      The Your cart panel shows "Cart total: $16.00".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/07-removing-the-mug-updates-the-count-and-total/report.md
+blocked      08 Paying with the test card confirms the order
+  1. blocked      Checkout shows "Payment successful".
+  2. blocked      Checkout shows "Charged $28.00 to the card ending 4242".
+  3. blocked      The Your cart panel shows "Your cart is empty."
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/08-paying-with-the-test-card-confirms-the-order/report.md
+passed       09 A declined card is not shown as paid
+  1. passed       Checkout shows "Payment declined. Your card was not charged."
+  2. passed       Checkout does not show "Payment successful".
+  3. passed       The Your cart panel still shows "Cart total: $28.00".
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/09-a-declined-card-is-not-shown-as-paid/report.md
+passed       10 Signing out returns to the sign-in page
+  1. passed       The sign-in page with a Sign in button is shown.
+  2. passed       "Signed in as Robin" is no longer shown.
+  Report: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/10-signing-out-returns-to-the-sign-in-page/report.md
+Summary: /Users/pz/w/perch-shop/.composal/verify-runs/20261014-162706/summary.md
+error: 4 of 10 Scenarios did not pass

@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://composal.ai/schema/verify/v1/scenario.json
+$schema: https://composal.ai/schema/verify/v1/scenario.json
+name: 04s The Confirm upgrade button moves the account to Pro
+labels: [strict]
+allowed_actions: writes
+starting_conditions: 'Signed out on the Perch sign-in page, which shows a demo account.'
+steps:
+  - 'Sign in with the demo account shown on the sign-in page.'
+  - 'Open the invoice preview for upgrading to Pro.'
+  - 'Press the Confirm upgrade button once. Do not press any other button in the invoice preview.'
+outcomes:
+  - 'Immediately after pressing Confirm upgrade, the Billing panel shows "Current plan: Pro".'
+  - 'The invoice preview is closed.'

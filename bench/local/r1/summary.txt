@@ -1,0 +1,12 @@
+base exit=0 seconds=74
+move exit=0 seconds=66
+rename exit=0 seconds=83
+menu exit=0 seconds=76
+postcode exit=0 seconds=85
+copy exit=1 seconds=79
+bug-preview exit=1 seconds=67
+bug-total exit=1 seconds=70
+bug-count exit=1 seconds=77
+bug-declined exit=1 seconds=63
+bug-charge exit=1 seconds=87
+bug-confirm exit=0 seconds=73
