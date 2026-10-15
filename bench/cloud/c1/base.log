@@ -1,0 +1,12 @@
+Watch run verification_run_4vzJd5PWD8jPuapKEBM30wk1: https://composal.ai/personal-user-1-tgll9s/verify/perch-shop/runs/verification_run_4vzJd5PWD8jPuapKEBM30wk1
+Queued run verification_run_4vzJd5PWD8jPuapKEBM30wk1.
+passed     01 Signing in opens the shop
+passed     02 A wrong password is refused
+passed     03 The Pro invoice preview opens without confirming
+passed     04 Confirming the upgrade moves the account to Pro
+passed     05 Adding a notebook updates the cart
+passed     06 Raising the mug quantity updates the total
+passed     07 Removing the mug updates the count and total
+passed     08 Paying with the test card confirms the order
+passed     09 A declined card is not shown as paid
+passed     10 Signing out returns to the sign-in page

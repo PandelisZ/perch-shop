@@ -1,0 +1,7 @@
+base exit=0 seconds=321 attempts=1
+move exit=0 seconds=222 attempts=1
+rename exit=1 seconds=240 attempts=1
+menu exit=1 seconds=232 attempts=1
+postcode exit=1 seconds=243 attempts=1
+copy exit=1 seconds=242 attempts=1
+bug-preview exit=1 seconds=116 attempts=1
