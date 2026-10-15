@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 # Runs the ten Scenarios on the cloud runner against every build, one build at
 # a time (parallel launches hit API 500s). Retries a launch that 500s, twice.
-# Usage: bench/run-cloud-matrix.sh <round>
+# Usage: bench/run-cloud-matrix.sh <round> [build ...] [--no-strict]
 set -u
-round=$1
+round=$1; shift
+strict=1; builds=()
+for a in "$@"; do [ "$a" = --no-strict ] && strict=0 || builds+=("$a"); done
+[ ${#builds[@]} -eq 0 ] && builds=(base move rename menu postcode copy bug-preview bug-total bug-count bug-declined bug-charge bug-confirm)
 dir=bench/cloud/$round; mkdir -p $dir
 run() { # <log> <files> <env name>
   for attempt in 1 2 3; do
@@ -16,10 +19,10 @@ run() { # <log> <files> <env name>
   echo "$(basename $1 .log) exit=$code seconds=$(( $(date +%s) - start )) attempts=$attempt" >> $dir/summary.txt
 }
 envname() { python3 -c "import json;print(json.load(open('bench/environments.json'))['$1']['env_name'])"; }
-for b in base move rename menu postcode copy bug-preview bug-total bug-count bug-declined bug-charge bug-confirm; do
+for b in "${builds[@]}"; do
   run $dir/$b.log scenarios "$(envname $b)"
 done
-for b in bug-confirm base; do
+[ $strict = 1 ] && for b in bug-confirm base; do
   run $dir/strict-$b.log scenarios-strict/04s-confirm-button.yaml "$(envname $b)"
 done
 echo "round $round done" >> $dir/summary.txt
